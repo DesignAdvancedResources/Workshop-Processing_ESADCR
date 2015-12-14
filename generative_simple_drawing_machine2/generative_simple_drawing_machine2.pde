@@ -27,7 +27,7 @@ void setup() {
 void draw() {
   evolX--;
   evolY++;
-  float r = mudaAcor();
+ 
   
   if (evolX == 0) {
     evolX = width;
@@ -71,24 +71,6 @@ void draw() {
   //line(X1, Y1, AX1, AY1);
   //line(AX2, AY2, X2, Y2);
   strokeWeight(0.2);
-  stroke(r, 40, 255-cor1);
+  stroke(200, 40, 255-cor1);
   bezier(X1, Y1, AX1, AY1, AX2, AY2, X2, Y2);
-}
-
-
-class cores {
-
-  
-  
-  
-float mudaAcor(){
-
-float red = random(255);
-return red;
-
-}
-
-
-
-
 }
