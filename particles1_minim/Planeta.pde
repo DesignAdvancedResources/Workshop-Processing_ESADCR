@@ -77,14 +77,17 @@ class Planeta {
 
     //
   }
-  void dimensionar() {
-    acel = map(mouseY,height,0,0,1.3);
-    raio = 5-random(3);
+  void dimensionar(float som) {
+    
+    
+    acel = map(som,0,10,0,1);
+    
+    raio = map(som,0,80,2,5)-random(3);
   }
 
   void desenhar() {
-    
-    ellipse(posicaoX, posicaoY, raio, raio);
+    stroke(raio);
+    line(PrevposicaoX, PrevposicaoY,posicaoX, posicaoY);
     PrevposicaoX = posicaoX;
     PrevposicaoY = posicaoY;
   }

@@ -1,10 +1,10 @@
 
 ArrayList planets;
 
-int numberOfPlanets = 300;
+int numberOfPlanets = 600;
 
 int count;
-int tempoVida = 3;
+int tempoVida = 2;
 
 void setup(){
 
@@ -36,15 +36,26 @@ count = 0;
 fill(0);
 //background(255);
 
+
+newBorns();
 for (int j = 0; j <planets.size(); j++){
 Planeta planet = (Planeta)planets.get(j);
+planet.dimensionar();
 planet.direcciona();
 planet.mover();
-planet.dimensionar();
 planet.desenhar();
 
 }
 count++;
 
+
+}
+
+void newBorns(){
+
+if(count == tempoVida-1){
+Planeta planets = new Planeta();
+
+}
 
 }
